@@ -2,17 +2,17 @@ import { Component } from 'angular2/core';
 import { CORE_DIRECTIVES } from 'angular2/common';
 import { RouterLink } from 'angular2/router';
 //import { Observable } from 'rxjs/Observable';
-import { DataService } from '../../services/data.service';
-import { Sorter } from '../../utils/sorter';
-import { FilterTextboxComponent } from '../filterTextbox/filterTextbox.component';
-import { SortByDirective } from '../../directives/sortby.directive';
-import { CapitalizePipe } from '../../pipes/capitalize.pipe';
-import { TrimPipe } from '../../pipes/trim.pipe';
+import { DataService } from '../services/data.service';
+import { Sorter } from '../../core/utils/sorter';
+import { FilterTextboxComponent } from '../../core/components/filterTextbox.component';
+import { SortByDirective } from '../../core/directives/sortby.directive';
+import { CapitalizePipe } from '../../core/pipes/capitalize.pipe';
+import { TrimPipe } from '../../core/pipes/trim.pipe';
 
 @Component({ 
   selector: 'customers', 
   providers: [DataService],
-  templateUrl: 'app/components/customers/customers.component.html',
+  templateUrl: 'app/customers/components/customers.component.html',
   directives: [CORE_DIRECTIVES, RouterLink, FilterTextboxComponent, SortByDirective],
   pipes: [CapitalizePipe, TrimPipe]
 })
